@@ -15,21 +15,32 @@ def consolidate_cart(cart)
   new_array = [] 
   i = 0 
   while i < cart.length do 
+<<<<<<< HEAD
     new_cart_item = find_item_by_name_in_collection(cart[i][:item], new_array)
     if new_cart_item != nil 
        new_cart_item[:count] += 1 
     else    
     new_cart_item = {
+=======
+    cart_item = find_item_by_name_in_collection(cart[i][:item], new_array)
+  cart_item != nil ? cart_item[:count] += 1 : cart_item = {
+>>>>>>> eec025c3c45bea0b468ccd9f29085b30e69bcdb4
     :item => cart[i][:item],
     :price => cart[i][:price],
     :clearance => cart[i][:clearance],
     :count => 1 
   }
+<<<<<<< HEAD
    new_array << new_cart_item
   end 
   i += 1 
 end 
 new_array
+=======
+   new_array << cart_item
+  end 
+  i += 1 
+>>>>>>> eec025c3c45bea0b468ccd9f29085b30e69bcdb4
   # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
